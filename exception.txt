@@ -1,0 +1,29 @@
+
+1.
+ Yes. Suppose you have thought long and hard and have decided that you need to circumvent this restriction.
+ This is almost never the case, because the right solution is to go back and redesign your methods to reflect the exceptions that you need to throw. 
+ Imagine, however, that for some reason a system class has you in a straitjacket.
+ Your first solution is to subclass RuntimeException to make up a new, exempt exception of your own.
+ Now you can throw it to your heart's content, because the throws clause that was annoying you does not need to include this new exception. 
+ If you need a lot of such exceptions, an elegant approach is to mix in some novel exception interfaces to your new Runtime classes.
+ You're free to choose whatever subset of these new interfaces you want to catch (none of the normal Runtime exceptions need be caught), while any leftover (new) Runtime exceptions are (legally) allowed to go through that otherwise annoying standard method in the library.
+
+2.
+
+Exceptions - 
+  * subclass of java.lang.Throwable class
+  * Exceptions occur at the runtime and causes the termination of the program.
+  * The termination can be recovered using TRY,CATCH blocks.
+  * There are Catched and Uncatched types of Exception .
+  * Checked Exceptions can be found at compile time.
+  * Unchecked Exceptions can be found only at runtime.
+
+Errors-
+  * subclass of java.lang.Throwable class
+  * Errors can be found only at the runtime.
+  * Error leads to the termination of the program.
+  * example: out of memory error,system crash error.
+
+Runtime Exceptions-
+  * RuntimeException is the superclass of those exceptions that can be thrown during the normal operation of the Java Virtual Machine.
+  * Runtime Exceptions classes comes under unChecked Exception.
